@@ -40,3 +40,11 @@
 서버 측 데이터를 수정하는 모든 작업은 mutation을 통해 보내야 한다는 규칙을 설정하는 것이 유용합니다.
 2> Mutate는 DB의 상태를 변경하려고 할 때 보내는 작업입니다.
 3> Query는 DB에서 데이터를 가져올 때 사용합니다.
+
+# 2.4 Non Nullable Fields
+
+1> ' ! '에 대해서 배우기
+2> Lists and Non-Null
+=> 아래 Character에 name에 string 타입을 사용하고, 느낌표 !를 추가하여 Non-Null로 표시한다.
+=> Non-Null로 표시하게 되면 서버가 항상 이 필드에 대해 null이 아닌 값을 반환할 것으로 예상한다. 그래서 null 값을 얻게 되면 클라이언트에게 문제가 있음을 알린다.
+3> https://graphql.org/learn/schema/#lists-and-non-null
