@@ -56,3 +56,9 @@
 => 모든 graphql 서버에서 required인 type이다.
 3> Query에 넣는 필드들은 request할 수 있는 것들이 됩니다.
 4> !를 쓰지 않으면 해당 필드는 nullable field가 됩니다.(null값을 가질 수 있는 필드)
+
+# 2.6 Query Resolves
+
+1> resolver 함수는 데이터베이스에 엑세스한 다음 데이터를 반환한다.
+2> args는 graphql 쿼리의 필드에 제공된 인수다.
+3> https://graphql.org/learn/execution/#root-fields-resolvers
