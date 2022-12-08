@@ -48,3 +48,11 @@
 => 아래 Character에 name에 string 타입을 사용하고, 느낌표 !를 추가하여 Non-Null로 표시한다.
 => Non-Null로 표시하게 되면 서버가 항상 이 필드에 대해 null이 아닌 값을 반환할 것으로 예상한다. 그래서 null 값을 얻게 되면 클라이언트에게 문제가 있음을 알린다.
 3> https://graphql.org/learn/schema/#lists-and-non-null
+
+# 2.5 Recap
+
+1> 아폴로 서버를 실행하기 위해서는 바드시 최소 1억개의 Query가 필요하다.
+2> type Quary는 가장 기본적인 타입이다.
+=> 모든 graphql 서버에서 required인 type이다.
+3> Query에 넣는 필드들은 request할 수 있는 것들이 됩니다.
+4> !를 쓰지 않으면 해당 필드는 nullable field가 됩니다.(null값을 가질 수 있는 필드)
