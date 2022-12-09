@@ -100,3 +100,35 @@ return "hello";
   tweets.push(newTweet)
   return newTweet;
   },
+
+# 2.10 Documentation
+
+1> localhost:4000으로 이동하면, graphql studio로 오게 된다.
+2> Schema에는 나의 API의 documentation이 있다.
+3> Docstring(Schema-Reference)
+
+- type, field 또는 argument에 대한 설명을 제공한다.
+- Docstring은 apollo studio explorer를 포함한 많은 일반적인 graphql 도구에 자동으로 나타난다.
+
+4>
+"""
+User에 대해 설명
+"""
+type User{
+"""
+firstName에 대해 설명
+"""
+firstName: String!
+age (
+"""
+반드시 숫자여야 합니다.
+"""
+arg: int
+)
+}
+5> https://www.apollographql.com/docs/resources/graphql-glossary/#docstring
+6> Altair GraphQL Client
+
+- AGC는 GraphQl queries 및 implementations을 디버그할 때 사용할 수 있다.
+- 추가적으로 파일 업로드 기능을 제공
+  7> https://altair.sirmuel.design/
