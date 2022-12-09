@@ -79,4 +79,24 @@ return "hello";
 },
 },
 4> https://www.apollographql.com/docs/apollo-server/data/resolvers/#resolver-arguments
-5>
+
+# 2.9 Relationships
+
+1> Users와 Tweets를 연결해 보기
+2> resolvers의 첫 번째 인수 데이터가 어떻게 DB 데이터로 전달 받는지 정리
+
+- gql에서 개발자가 정의한 type(Tweet)을 data type으로 사용하는 type(allTweet, tweet(id:ID!))에서 반환한 데이터(tweets DB)를 첫 번째 인자 (Tweet({id, text, userid}, seconParam))로 받는 것
+- type resolver의 첫 번째 인자는 해당 type을 data type으로 사용하는 상위 type의 resolvers가 반환한 데이터를 전달 받는 것
+- 강의 영상을 보면, author resolver가 받는 userid는 Tweet을 data type을 사용하는 모든 resolvers의 반환값의 요소로 사용되고 있으며, 모든 resolvers의 반환값이 tweets DB으로 귀결되는 걸 확인할 수 있다.
+  3> 코드 챌린지
+  => 트윗 생성 전에 user 데이터베이스에 userId에 해당하는 유저가 존재하는지 체크 후, 없다면 에러를 띄우거나 트윗을 생성하지 않도록 하기
+  => postTweet(root, {text, userId}){
+  const findUser = users.find((user) => user.id === userId);
+  if(!findUser) return false;
+  const newTweet = {
+  id : tweets.length + 1 ,
+  text
+  }
+  tweets.push(newTweet)
+  return newTweet;
+  },
