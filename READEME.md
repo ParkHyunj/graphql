@@ -131,4 +131,20 @@ arg: int
 
 - AGC는 GraphQl queries 및 implementations을 디버그할 때 사용할 수 있다.
 - 추가적으로 파일 업로드 기능을 제공
-  7> https://altair.sirmuel.design/
+
+7> https://altair.sirmuel.design/
+
+# 2.11 Migrating from REST to GraphQl
+
+1> GraphQl API로 REST API를 감쌀 수 있는지 알아보자.
+2> front-end에서는 GraphQl을 쓰고 싶고, back-end에서는 REST API를 쓰고 싶을 수도 있을 때, 아주 작은 graphql 서버를 만들거나 express server 최상단에 apollo를 두고 REST API를 GraphQl API로 바꾸는 작업을 하면 된다.
+3> fetch에서 Unexpected token < in JSON at position 0 에러 메시지 발생 시
+return fetch("https://yts.mx/api/v2/list_movies.json",{
+headers: {
+'Content-Type': 'application/json',
+},
+})
+.then((r) => r.json())
+.then((json) => json.data.movies);
+
+- fetch 옵션 값에 위 와 같이 headers 에 Content-Type의 값을 'application/json' 으로 추가 해주시면 됩니다.
