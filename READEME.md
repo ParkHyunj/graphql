@@ -62,3 +62,8 @@
 1> resolver 함수는 데이터베이스에 엑세스한 다음 데이터를 반환한다.
 2> args는 graphql 쿼리의 필드에 제공된 인수다.
 3> https://graphql.org/learn/execution/#root-fields-resolvers
+
+# 2.7 Mutation Resolvers
+
+1> mutation type에 대한 resolver를 만들고 싶을 때
+2> variables를 전달할 수 있도록 graphql 코드를 자동으로 만들어준다.(localhost:4000에서)
