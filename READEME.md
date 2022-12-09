@@ -67,3 +67,16 @@
 
 1> mutation type에 대한 resolver를 만들고 싶을 때
 2> variables를 전달할 수 있도록 graphql 코드를 자동으로 만들어준다.(localhost:4000에서)
+
+# 2.8 Type Resolvers
+
+1> 어떤 type 내부의 어떤 field든 resolver function을 만드는 법
+2> Resolver arguments
+=> Resolver 함수에는 parent(root or source).args, context, info의 네 가지 인수가 순서대로 전달된다.
+3> User: {
+fullName: (parent, args, context, info) => {
+return "hello";
+},
+},
+4> https://www.apollographql.com/docs/apollo-server/data/resolvers/#resolver-arguments
+5>
